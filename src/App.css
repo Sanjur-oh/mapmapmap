@@ -1,38 +1,72 @@
-.App {
+
+h1 {
+  color: black;
+  font-size: 4rem;
+  /* border: solid 1px purple; */
   text-align: center;
+  font-family: Akzidenz-Grotesk Condesnsed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  color: black;
+  font-size: 4rem;
+  /* border: solid 1px purple; */
+  text-align: center;
+  font-family: Akzidenz-Grotesk Condesnsed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*, *::after, *::before {
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal-header {
+  padding: 10px 15px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid black;
+
 }
 
-.App-link {
-  color: #61dafb;
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  /* opacity: 0; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:rgba(0, 0, 0, 0.5);
+  pointer-events: none;
 }
